@@ -15,8 +15,8 @@
   
 <br>
 
-# Introducción.
-
+# Introduccion
+En este documento se presentará la documentación detallada de un programa de una aplicación web, que ha sido diseñado para almacenar información de usuarios en una base de datos Postgres y Redis, realizar cálculos complejos en un worker y presentar los resultados en una página web mediante el uso de un cliente React. La aplicación ha sido empaquetada en Docker con seis servicios: nginx, postgres, api, redis, client-react y worker. La documentación incluirá una introducción a la aplicación y su funcionamiento, un marco teórico que explicará los componentes y tecnologías utilizadas, una prueba de funcionamiento detallada y una conclusión que destacará los resultados y posibles mejoras para el futuro. Este proyecto es una excelente oportunidad para comprender las distintas partes que conforman una página web profesional, y cómo se integran para brindar una experiencia de usuario satisfactoria.
 
   
 <br>
@@ -82,6 +82,39 @@ Redis es un motor de base de datos en memoria, basado en el almacenamiento en ta
 
 [Haga Clic aquí]()
   
+<br>
+- Detalle de la app 
+### */keys.js
+Estos archivos almacenan las credenciales necesarias para la conexion a las diferentes bases de datos.
+
+### client/public/index.html
+
+Este es - En este proyecto se pueden ubicar los archivos mas importantes, entre estos estan:
+
+### client/src/Fib.js
+Este archivo es el que se encarga de manejar el input, el envio de la información, la actualización de la informacion y el muestreo en pantalla.
+
+### nginx/default.conf
+
+Este archivo configura al nginx para conectar el api y el cliente en uno solo, permitiendo acceder a ellos mediante un unico puerto.
+
+### Server/index.js
+Este archivo es el que se encarga de recibir todas las consultas get y post, asi como enviar esa informacion a la base de datos. Tambien contiene un codigo especifico de redis que publica el canal insert, el cual permite el el worker pueda funcionar.
+
+### Worker/index.js
+Este archivo espera suscrito al canal insert y cuando envian la publicacion este obtiene el indice y realiza el calculo, para su posterior almacenamiento en redis.
+
+### docker-compose.yml
+Gracias el archivo donde se carga toda la informacion enviada por react, gracias al div que tiene el ID " root ", sin este no se mostraria nada de la aplicacion.
+
+## Posibles mejoras
+Tras analizar profundamente el codigo del proyecto, he localizado varios casos de mejora:
+
+* Comenzando con la actualización automática de la pantalla cuando envio la información a travéz del submit.
+* El diseño poco encantador 
+* La forma en la que se enseña la información.
+* Avisos al digitar algun numero mayor a 40
+* Control de errores cuando el usuario no digita un número.
 <br>
 
 # Conclusión. 
