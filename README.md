@@ -83,7 +83,7 @@ Redis es un motor de base de datos en memoria, basado en el almacenamiento en ta
   
 <br>
 
-# Puntos de mejora. 
+## Puntos de mejora. 
 
 + Diseño más amigable y fácil de entender. 
 + Añadir controles para evitar errores.
