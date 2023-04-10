@@ -83,5 +83,14 @@ Redis es un motor de base de datos en memoria, basado en el almacenamiento en ta
   
 <br>
 
+# Puntos de mejora. 
+
++ Diseño más amigable y fácil de entender. 
++ Añadir controles para evitar errores.
++ Mejorar distribución de informaciones a mostrar.
++ Mostar mensajes indicadores para el usuario.
+
+<br>
+
 # Conclusión. 
 Para concluir, al realizar un análisis a fondo a este programa nos podemos dar cuenta que es muy importante e interesante el saber cómo este está estructurado y todas las herramientas o servicios se relacionan entre sí. Las partes de esta estructura que son de mucha importancia son server, nginx y worker porque son los servicios que dan los controles a la app aparte del diseño que es algo superficial pero el JS que hace los cálculos complejos de Fibonacci son lo más destacable a tener en cuenta para la realización de alguna aplicación como esta.
